@@ -1,24 +1,25 @@
 
 # Requirements to execute the project
 
-1. Clone project from [Github Link](https://github.com/shekhfiroz/truck.git)
-2. Import as Existing Maven Projects if it is Eclipse
-3. Install mongodb in your local system with default port 27017
+1. Clone project from [Github Link](https://github.com/shekhfiroz/truck.git).
+2. Import as Existing Maven Projects if it is Eclipse.
+3. Install mongodb in your local system with default port 27017.
 4. Run TruckApplication as Spring Boot App.
 
 
 # How to test the Program
-1. Install Postman
-2. Go to [API Documentation](http://localhost:9999/swagger-ui.html) to know the API details.
+1. Install Postman.
+2. Execute the Project. (Run com.truck.TruckApplication as Spring Boot App/Java Application).
+3. Go to [API Documentation](http://localhost:9999/swagger-ui.html) to know the API details.
 
 
 # Example
 
 **URL :** localhost:9999/signup
 
-**Body :** application /json
-
 **Input :**
+
+**Body :** application/json
 
 ```
 {
