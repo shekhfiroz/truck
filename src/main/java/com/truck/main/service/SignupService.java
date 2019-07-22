@@ -100,7 +100,7 @@ public class SignupService {
 		return signup.getCustomerId();
 	}
 
-	private String saveOTP(String generatedOTP, String mobile, String email, String otpType) {
+	public String saveOTP(String generatedOTP, String mobile, String email, String otpType) {
 		String encryptedOTP = OTPEncryptorDecryptor.encrypt(generatedOTP);
 		OTP otpDocument = new OTP();
 		otpDocument.setCreatedTime(new Date());

@@ -46,7 +46,15 @@ public class JwtSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.cors().and().csrf().disable().authorizeRequests().antMatchers("**/secure/**").authenticated().and().exceptionHandling().authenticationEntryPoint(entryPoint).and()
+//		http.cors().and().csrf().disable().
+//		authorizeRequests()
+//		.antMatchers("**/secure/**").authenticated().and().exceptionHandling().authenticationEntryPoint(entryPoint).and()
+//				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+//				.addFilterBefore(authenticationTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+//		http.headers().cacheControl();
+		
+		http.cors().and().csrf().disable()
+		.exceptionHandling().authenticationEntryPoint(entryPoint).and()
 				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 				.addFilterBefore(authenticationTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 		http.headers().cacheControl();

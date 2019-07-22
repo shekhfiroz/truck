@@ -15,6 +15,7 @@ public class OTP {
 	private String mobile;
 	private String email;
 	private String otpType;
+	private String customerId;
 	@JsonFormat(pattern = "dd-MM-yyyy hh:mm:ss a", timezone = "IST")
 	private Date createdTime;
 	@JsonFormat(pattern = "dd-MM-yyyy hh:mm:ss a", timezone = "IST")
@@ -66,6 +67,14 @@ public class OTP {
 
 	public void setOtpType(String otpType) {
 		this.otpType = otpType;
+	}
+
+	public String getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
 	}
 
 	public Date getCreatedTime() {

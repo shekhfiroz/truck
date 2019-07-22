@@ -15,4 +15,6 @@ public interface OtpRepository extends MongoRepository<OTP, String> {
 
 	OTP findByIdAndOtpTypeAndIsExpiredFalse(String id, String otpType);
 
+	List<OTP> findByOtpTypeAndIsExpiredFalseOrderByUpdatedTimeDesc(String otpType);
+
 }
