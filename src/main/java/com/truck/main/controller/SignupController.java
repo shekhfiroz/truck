@@ -2,6 +2,7 @@ package com.truck.main.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +17,13 @@ public class SignupController {
 	@Autowired
 	private SignupService signupService;
 
+//http://localhost:9999/truck/test
+	@GetMapping("/test")
+	public String test() {
+		return "Hey SignUp Controller is Running..";
+	}
+
+//http://localhost:9999/truck/signup
 	@PostMapping("/signup")
 	public ResponseEntity<?> signup(@RequestBody SignupDTO signupDTO) {
 		return signupService.signup(signupDTO);
